@@ -34,9 +34,14 @@ Bundle 'FuzzyFinder'
 Bundle 'lukerandall/haskellmode-vim'
 "Bundle 'ujihisa/neco-ghc'
 "Bundle 'haskell.vim'
+Bundle 'vcscommand.vim'
+Bundle 'sjl/threesome.vim'
+Bundle 'gregsexton/gitv'
+Bundle 'tpope/vim-fugitive'
+"Bundle 'Conque-Shell'
+"needs +python build option
 
 " Color schemes
-Bundle 'charon'
 Bundle 'molokai'
 Bundle 'Wombat'
 Bundle 'Gentooish'
