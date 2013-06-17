@@ -35,6 +35,7 @@ Bundle 'lukerandall/haskellmode-vim'
 "Bundle 'ujihisa/neco-ghc'
 "Bundle 'haskell.vim'
 
+Bundle 'AutoComplPop'
 " Color schemes
 Bundle 'charon'
 Bundle 'molokai'
