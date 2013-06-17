@@ -41,6 +41,7 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'Conque-Shell'
 "needs +python build option
 
+Bundle 'AutoComplPop'
 " Color schemes
 Bundle 'molokai'
 Bundle 'Wombat'
