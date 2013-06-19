@@ -139,7 +139,7 @@ set smartcase
 
 set t_Co=256
 au BufEnter *.hs compiler ghc
-:let g:haddock_indexfiledir="/home/steven/.vim/"
+:let g:haddock_indexfiledir="$HOME/.vim/"
 
 
 set showcmd
@@ -156,7 +156,7 @@ set wildignore+=*/dist/*
 set wildignore+=*/components/*
 
 " Persistent undo
-set undodir=/home/steven/.vim/undodir
+set undodir=~/.vim/undodir
 set undofile
 
 :let g:haddock_browser="x-www-browser"
