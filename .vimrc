@@ -41,6 +41,8 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'Conque-Shell'
 "needs +python build option
 
+Bundle 'buffet.vim'
+Bundle 'ScrollColors'
 Bundle 'AutoComplPop'
 " Color schemes
 Bundle 'molokai'
