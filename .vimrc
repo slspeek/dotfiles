@@ -41,6 +41,7 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'Conque-Shell'
 "needs +python build option
 
+Bundle 'javacomplete'
 Bundle 'buffet.vim'
 Bundle 'ScrollColors'
 Bundle 'AutoComplPop'
@@ -140,8 +141,9 @@ set ignorecase
 set smartcase
 
 set t_Co=256
+au BufEnter *.hs :let g:haddock_indexfiledir="$HOME/.vim/"
+au BufEnter *.hs :let b:ghc_staticoptions="-Wall -Werror"
 au BufEnter *.hs compiler ghc
-:let g:haddock_indexfiledir="$HOME/.vim/"
 
 
 set showcmd
@@ -164,3 +166,5 @@ set undofile
 :let g:haddock_browser="x-www-browser"
 colorscheme oceandeep
 map <C-h> :JSHint
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+
