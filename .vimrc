@@ -38,8 +38,13 @@ Bundle 'vcscommand.vim'
 Bundle 'sjl/threesome.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
-"Bundle 'Conque-Shell'
+Bundle 'Conque-Shell'
 "needs +python build option
+
+"Python support
+Bundle 'davidhalter/jedi-vim'
+Bundle 'kevinw/pyflakes-vim'
+
 
 Bundle 'buffet.vim'
 Bundle 'ScrollColors'
