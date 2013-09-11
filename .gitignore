@@ -1,3 +1,5 @@
 .vim/bundle
 .vim/haskellmode.config
 *.pyc
+*~
+*.swp
