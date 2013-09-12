@@ -173,7 +173,6 @@ set undofile
 
 :let g:haddock_browser="x-www-browser"
 colorscheme oceandeep
-map <C-h> :JSHint
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 autocmd Filetype pyhton set ts=4 
 autocmd Filetype pyhton set softtabstop=4 
