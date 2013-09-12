@@ -1,8 +1,8 @@
 BACKUP=~/dotfiles.backup
 
-mkdir -p $BACKUP
-mv -i .vimrc .vim .tmux.conf .bashrc $BACKUP
 cd ~
+mkdir -vp $BACKUP
+mv -v .vimrc .vim .tmux.conf .bashrc $BACKUP
 ln -s $HOME/dotfiles/.vimrc 
 ln -s $HOME/dotfiles/.vim 
 ln -s $HOME/dotfiles/.tmux.conf
