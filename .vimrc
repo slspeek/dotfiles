@@ -18,7 +18,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'walm/jshint.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'jsruntime.vim'
 "Bundle 'jsoncodecs.vim'
 Bundle 'michalliu/jsruntime.vim'
@@ -160,6 +160,8 @@ set wildignore+=*_build/*
 set wildignore+=*/coverage/*
 set wildignore+=*/node_modules/*
 set wildignore+=*/dist/*
+set wildignore+=*/eggs/*
+set wildignore+=*/parts/*
 set wildignore+=*/components/*
 
 " Persistent undo
