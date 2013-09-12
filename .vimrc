@@ -28,6 +28,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'msanders/snipmate.vim'
 Bundle 'kien/ctrlp.vim'
 " vim-scripts repos
+Bundle 'ton/vim-bufsurf'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " Haskell
@@ -157,6 +158,8 @@ set laststatus=2
 let g:ctrlp_max_height = 30
 set wildignore+=*.pyc
 set wildignore+=*_build/*
+set wildignore+=*/eggs/*
+set wildignore+=*/parts/*
 set wildignore+=*/coverage/*
 set wildignore+=*/node_modules/*
 set wildignore+=*/dist/*
@@ -172,4 +175,9 @@ set undofile
 colorscheme oceandeep
 map <C-h> :JSHint
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+autocmd Filetype pyhton set ts=4 
+autocmd Filetype pyhton set softtabstop=4 
+autocmd Filetype pyhton set shiftwidth=4
 
+map <silent> <F3> :Bufferlist<CR>
+map <C-_> :Bufferlist<CR>
