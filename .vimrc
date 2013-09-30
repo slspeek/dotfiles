@@ -41,6 +41,8 @@ Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Conque-Shell'
 "needs +python build option
+" Support for D
+Bundle 'JesseKPhillips/d.vim'
 
 "Python support
 Bundle 'davidhalter/jedi-vim'
