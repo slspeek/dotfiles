@@ -7,4 +7,7 @@ ln -s $HOME/dotfiles/.vimrc
 ln -s $HOME/dotfiles/.vim 
 ln -s $HOME/dotfiles/.tmux.conf
 ln -s $HOME/dotfiles/.bashrc
+cd ~/dotfiles
+git submodule init
+git submodule update
 
