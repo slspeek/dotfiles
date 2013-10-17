@@ -51,6 +51,11 @@ Bundle 'javacomplete'
 Bundle 'buffet.vim'
 Bundle 'ScrollColors'
 Bundle 'AutoComplPop'
+
+"Golang
+"
+Bundle 'go.vim'
+
 " Color schemes
 Bundle 'molokai'
 Bundle 'Wombat'
