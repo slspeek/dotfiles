@@ -54,7 +54,7 @@ Bundle 'AutoComplPop'
 
 "Golang
 "
-Bundle 'go.vim'
+Bundle 'jnwhiteh/vim-golang'
 
 " Color schemes
 Bundle 'molokai'
