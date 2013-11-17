@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-My dotfiles for Javascript, Python and Haskell development
+My dotfiles for Go, Javascript, Python and Haskell development
 
 Usage:
 ------
