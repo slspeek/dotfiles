@@ -18,23 +18,20 @@ Bundle 'godlygeek/tabular'
 Bundle 'walm/jshint.vim'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-fugitive'
+Bundle 'aurigadl/vim-angularjs'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'jsruntime.vim'
 "Bundle 'jsoncodecs.vim'
 Bundle 'michalliu/jsruntime.vim'
-Bundle 'andre-luiz-dos-santos/autocomp'
+"Bundle 'andre-luiz-dos-santos/autocomp'
 Bundle 'Lokaltog/vim-powerline'
 "Bundle 'jsflakes.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'kien/ctrlp.vim'
-" vim-scripts repos
-Bundle 'ton/vim-bufsurf'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 " Haskell
 Bundle 'lukerandall/haskellmode-vim'
-"Bundle 'ujihisa/neco-ghc'
-"Bundle 'haskell.vim'
 Bundle 'vcscommand.vim'
 Bundle 'sjl/threesome.vim'
 Bundle 'gregsexton/gitv'
@@ -48,6 +45,7 @@ Bundle 'JesseKPhillips/d.vim'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'kevinw/pyflakes-vim'
 Bundle 'javacomplete'
+
 Bundle 'buffet.vim'
 Bundle 'ScrollColors'
 Bundle 'AutoComplPop'
@@ -181,9 +179,12 @@ set undofile
 :let g:haddock_browser="x-www-browser"
 colorscheme oceandeep
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-autocmd Filetype pyhton set ts=4 
-autocmd Filetype pyhton set softtabstop=4 
-autocmd Filetype pyhton set shiftwidth=4
+autocmd Filetype python set ts=4 
+autocmd Filetype python set softtabstop=4 
+autocmd Filetype python set shiftwidth=4
 
 map <silent> <F3> :Bufferlist<CR>
 map <C-_> :Bufferlist<CR>
+
+autocmd Filetype javascript map <F4> :%!js-beautify -s 2 -f -<CR>
+autocmd Filetype go map <F4> :Fmt<CR>
