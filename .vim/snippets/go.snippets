@@ -1,0 +1,15 @@
+snippet ife
+	if err != nil {
+		${1}
+	}
+
+snippet tf
+	func Test${1:Foo}(t *testing.T) {
+		${2}
+	}
+
+snippet iff
+	if err != nil {
+		t.Fatal(err)
+	}
+

@@ -23,7 +23,7 @@ Bundle 'aurigadl/vim-angularjs'
 "Bundle 'jsruntime.vim'
 "Bundle 'jsoncodecs.vim'
 Bundle 'michalliu/jsruntime.vim'
-"Bundle 'andre-luiz-dos-santos/autocomp'
+Bundle 'andre-luiz-dos-santos/autocomp'
 Bundle 'Lokaltog/vim-powerline'
 "Bundle 'jsflakes.vim'
 Bundle 'msanders/snipmate.vim'
@@ -53,6 +53,7 @@ Bundle 'AutoComplPop'
 "Golang
 "
 Bundle 'jnwhiteh/vim-golang'
+Bundle 'Blackrush/vim-gocode'
 
 " Color schemes
 Bundle 'molokai'
@@ -119,8 +120,8 @@ map <c-h> <c-w>h
 
 
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+map <C-l> :NERDTreeToggle<CR>
+map <C-q>  :tabprevious<CR>
 
 
 
@@ -177,7 +178,7 @@ set undodir=~/.vim/undodir
 set undofile
 
 :let g:haddock_browser="x-www-browser"
-colorscheme oceandeep
+colorscheme delek
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 autocmd Filetype python set ts=4 
 autocmd Filetype python set softtabstop=4 
@@ -186,5 +187,14 @@ autocmd Filetype python set shiftwidth=4
 map <silent> <F3> :Bufferlist<CR>
 map <C-_> :Bufferlist<CR>
 
-autocmd Filetype javascript map <F4> :%!js-beautify -s 2 -f -<CR>
 autocmd Filetype go map <F4> :Fmt<CR>
+autocmd Filetype javascript map <F4>:call JSBeautify()<CR>
+map <C-'> cs"'
+
+function! JSBeautify()
+  call inputsave()
+  :%!js-beautify -s 2 -f -
+  call inputrestore()
+endfunction
+
+map <C-n> :tabnew<CR>
