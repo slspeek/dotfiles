@@ -16,8 +16,10 @@ neww -n Musica 'cd ~ && mocp'
 
 neww -n TmuxManual 'man tmux'
 
-neww -n Config 'cd ~ && vim ~/session.tmux'
+neww -n Config 'cd ~ && vim ~/dotfiles/session.tmux'
 
 neww -n Snippets 'vim ~/.vim/snippets/'
 
 neww 'autocutsel'
+
+neww -n Watch 'cd ~/projs/nog/src/github.com/slspeek/gotube/web/; grunt watch'

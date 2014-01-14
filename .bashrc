@@ -59,4 +59,4 @@ export PAGER=most
 export PATH=$HOME/.cabal/bin:$HOME/bin:$HOME/haskell_tools/bin:$HOME/tools/bin:$GOROOT/bin:$PATH
 HISTSIZE=100000
 setxkbmap -layout us -option ctrl:nocaps
-stty stop undef
+#stty stop undef
