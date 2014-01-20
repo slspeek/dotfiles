@@ -68,26 +68,15 @@ filetype plugin on
 filetype indent on
 
 
-function! Google()
-	call inputsave()
-	let searchterm = input('Search for: ')
-	call inputrestore()
-	return searchterm
-endfunction
-map <F3> <ESC>:! /usr/bin/chromium-browser 'https://duckduckgo.com/?q=<C-R>=Google()<CR>'<CR><CR>
-iabbr jdesc describe('name', function() {});
-iabbr jit it('should', function() {	expect(true).toBe(false);});
-set tags=tags;/
+set tags=$HOME/projs/nog/tags
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 autocmd! bufwritepost *.js :JSHint
 
-map <F6> :w:!cabal install && cd src/webapp/dist && iconserver 
-map <F7> :w:!ghci %
-map <F8> :w:make
-
-map <F9> :w:!./one.sh
+map <F1> <ESC>
+map <F5> :tabprevious<CR>
+map <F6> :tabnext<CR>
 
 set ts=2
 map <c-s> :w
@@ -120,8 +109,7 @@ map <c-h> <c-w>h
 
 
 " easier moving between tabs
-map <C-l> :NERDTreeToggle<CR>
-map <C-q>  :tabprevious<CR>
+map <C-\> :NERDTreeToggle<CR>
 
 
 
@@ -188,7 +176,7 @@ map <silent> <F3> :Bufferlist<CR>
 map <C-_> :Bufferlist<CR>
 
 autocmd Filetype go map <F4> :Fmt<CR>
-autocmd Filetype javascript map <F4>:call JSBeautify()<CR>
+autocmd BufEnter *.js map <F4>:call JSBeautify()<CR>
 map <C-'> cs"'
 
 function! JSBeautify()
@@ -198,3 +186,4 @@ function! JSBeautify()
 endfunction
 
 map <C-n> :tabnew<CR>
+map \= F=i:<ESC>

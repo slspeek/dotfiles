@@ -1,4 +1,4 @@
-new  -s Gotube -n Vim 'cd ~/projs/nog/src/github.com/slspeek/gotube/ && vim .'
+new  -s Gotube -n Vim 'cd ~/projs/nog/src/github.com/slspeek/gotube/ && stty -ixon; vim .'
 split-window -d 'cd ~/projs/nog/src/github.com/slspeek/gotube/web && karma start --singleRun=false'
 resize-pane -D 26
 
@@ -23,3 +23,5 @@ neww -n Snippets 'vim ~/.vim/snippets/'
 neww 'autocutsel'
 
 neww -n Watch 'cd ~/projs/nog/src/github.com/slspeek/gotube/web/; grunt watch'
+
+select-window -t 1
