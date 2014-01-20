@@ -14,11 +14,9 @@ neww -n MongoDB 'cd ~ && mongo devserver'
 
 neww -n Musica 'cd ~ && mocp'
 
-neww -n TmuxManual 'man tmux'
+neww -n Tmux 'man tmux'
 
 neww -n Config 'cd ~ && vim ~/dotfiles/session.tmux'
-
-neww -n Snippets 'vim ~/.vim/snippets/'
 
 neww 'autocutsel'
 
