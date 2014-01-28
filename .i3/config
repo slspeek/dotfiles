@@ -13,6 +13,7 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font lucidasanstypewriter-12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -137,6 +138,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+i exec --no-startup-id iceweasel
 bindsym $mod+g exec --no-startup-id google-chrome
 bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+m exec --no-startup-id pcmanfm
 
 bindcode 122 exec --no-startup-id amixer set Master 5%- unmute
 bindcode 123 exec --no-startup-id amixer set Master 5%+ unmute
@@ -146,4 +148,5 @@ bindcode 150 workspace 1
 # finds out, if available)
 bar {
         status_command i3status
+        font lucidasanstypewriter-12
 }
