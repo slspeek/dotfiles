@@ -1,3 +1,0 @@
-set -x GOROOT ~/tools/go
-set -x GOPATH ~/projs/nog
-set -x PATH $GOROOT/bin ~/tools/bin $PATH

@@ -1,3 +1,4 @@
+set shell=/bin/sh
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -72,7 +73,7 @@ set tags=$HOME/projs/nog/tags
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
-autocmd! bufwritepost *.js :JSHint
+"autocmd! bufwritepost *.js :JSHint
 
 map <F1> <ESC>
 map <F5> :tabprevious<CR>
@@ -187,3 +188,16 @@ endfunction
 
 map <C-n> :tabnew<CR>
 map \= F=i:<ESC>
+
+let g:syntastic_mode_map = { 'mode': 'active',
+                           \ 'active_filetypes': ['javascript'],
+                           \ 'passive_filetypes': ['html'] }
+
+" To enable this plugin, edit the .vimrc like this:
+let g:syntastic_javascript = "closurecompiler"
+" and set the path to the Google Closure Compiler:
+let g:syntastic_javascript_closure_compiler_path ="$HOME/closure/mfc/node_modules/closure-pro-build/3p/closure-compiler-20130823/compiler.jar"
+
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
+nnoremap ; :
