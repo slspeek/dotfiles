@@ -138,6 +138,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+i exec --no-startup-id iceweasel
 bindsym $mod+g exec --no-startup-id google-chrome
 bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+Shift+Return exec --no-startup-id chromium
 bindsym $mod+m exec --no-startup-id pcmanfm
 
 bindcode 122 exec --no-startup-id amixer set Master 5%- unmute
