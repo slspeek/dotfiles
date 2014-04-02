@@ -1,0 +1,12 @@
+type ${1:Foo}Error struct {
+    mesg	string
+}
+
+func (e $1Error) Error() string {
+	return fmt.Sprintf("$1Error: %v", e.mesg)
+}
+
+func New$1Error(mesg string)  $1Error {
+	return $1Error{mesg:mesg}
+}
+${2}

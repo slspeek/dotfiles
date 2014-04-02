@@ -197,3 +197,4 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 nnoremap ; :
 set tags=$HOME/projs/camli/src/camlistore.org/tags
+inoremap <C-i> <C-o>:Import 
