@@ -14,7 +14,6 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
 Bundle 'lukaszb/vim-web-indent'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'godlygeek/tabular'
 Bundle 'walm/jshint.vim'
 Bundle 'jelera/vim-javascript-syntax'
@@ -37,14 +36,13 @@ Bundle 'vcscommand.vim'
 Bundle 'sjl/threesome.vim'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Conque-Shell'
 "needs +python build option
 " Support for D
-Bundle 'JesseKPhillips/d.vim'
+"Bundle 'JesseKPhillips/d.vim'
 
 "Python support
-Bundle 'davidhalter/jedi-vim'
-Bundle 'kevinw/pyflakes-vim'
+"Bundle 'davidhalter/jedi-vim'
+"Bundle 'kevinw/pyflakes-vim'
 Bundle 'javacomplete'
 
 Bundle 'buffet.vim'
@@ -53,8 +51,9 @@ Bundle 'AutoComplPop'
 
 "Golang
 "
-Bundle 'jnwhiteh/vim-golang'
+"Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
+set omnifunc=syntaxcomplete#Complete
 
 " Color schemes
 Bundle 'molokai'
@@ -67,9 +66,6 @@ Bundle 'oceandeep'
 filetype plugin indent on     " required!
 filetype plugin on
 filetype indent on
-
-
-set tags=$HOME/projs/nog/tags
 
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
@@ -87,7 +83,6 @@ imap <c-s> :w
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
-
 set pastetoggle=<F2>
 set clipboard=unnamed
 
@@ -109,7 +104,6 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 
-" easier moving between tabs
 map <C-\> :NERDTreeToggle<CR>
 
 
@@ -166,6 +160,7 @@ set wildignore+=*/components/*
 set undodir=~/.vim/undodir
 set undofile
 
+
 :let g:haddock_browser="x-www-browser"
 colorscheme delek
 autocmd Filetype java setlocal omnifunc=javacomplete#Complete
@@ -201,3 +196,4 @@ let g:syntastic_javascript_closure_compiler_path ="$HOME/closure/mfc/node_module
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 nnoremap ; :
+set tags=$HOME/projs/camli/src/camlistore.org/tags
