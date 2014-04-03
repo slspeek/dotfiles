@@ -1,3 +1,3 @@
 xrdb ~/.Xresources
-exec i3
+exec i3 --force-xinerama 
 
