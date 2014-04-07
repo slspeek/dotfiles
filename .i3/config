@@ -151,3 +151,13 @@ bar {
         status_command i3status
         font lucidasanstypewriter-12
 }
+
+mode "wallpaper" {
+        bindsym j exec --no-startup-id ~/dotfiles/apod/next.sh
+        bindsym k exec --no-startup-id ~/dotfiles/apod/previous.sh
+        # back to normal: Enter or Escape
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+p mode "wallpaper"
