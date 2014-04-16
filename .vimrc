@@ -24,7 +24,7 @@ Bundle 'aurigadl/vim-angularjs'
 "Bundle 'jsoncodecs.vim'
 Bundle 'michalliu/jsruntime.vim'
 Bundle 'andre-luiz-dos-santos/autocomp'
-Bundle 'Lokaltog/vim-powerline'
+"Bundle 'Lokaltog/vim-powerline'
 "Bundle 'jsflakes.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'kien/ctrlp.vim'
@@ -127,10 +127,7 @@ set shiftround
 set expandtab
 
 
-" Make search case insensitive
-set hlsearch
 set incsearch
-set ignorecase
 set smartcase
 
 set t_Co=256
@@ -197,4 +194,4 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 nnoremap ; :
 set tags=$HOME/projs/camli/src/camlistore.org/tags
-inoremap <C-i> <C-o>:Import 
+"imap <C-i> <C-o>:Import 
