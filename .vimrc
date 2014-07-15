@@ -48,6 +48,7 @@ Bundle 'javacomplete'
 Bundle 'buffet.vim'
 Bundle 'ScrollColors'
 Bundle 'AutoComplPop'
+Bundle 'vim-auto-save'
 
 "Golang
 "
@@ -104,7 +105,7 @@ map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 
-map <C-\> :NERDTreeToggle<CR>
+map <C-\> :NERDTreeFind<CR>
 
 
 
