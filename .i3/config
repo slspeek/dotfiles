@@ -19,7 +19,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+Q kill
@@ -135,10 +135,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Custom programs I want to run often
-bindsym $mod+i exec --no-startup-id iceweasel
-bindsym $mod+g exec --no-startup-id google-chrome
+bindsym $mod+i exec --no-startup-id inkscape
 bindsym $mod+c exec --no-startup-id chromium
-bindsym $mod+Shift+Return exec --no-startup-id chromium
+bindsym $mod+Shift+Return exec --no-startup-id icecat
 bindsym $mod+m exec --no-startup-id pcmanfm
 
 bindcode 122 exec --no-startup-id amixer set Master 5%- unmute
@@ -153,13 +152,18 @@ bar {
 }
 
 mode "wallpaper" {
-        bindsym j exec --no-startup-id ~/tools/bin/apod-bg -jump 1
-        bindsym k exec --no-startup-id ~/tools/bin/apod-bg -jump -1
-        bindsym i exec --no-startup-id ~/tools/bin/apod-bg -info
-        bindsym t exec --no-startup-id ~/tools/bin/apod-bg -apod
+        bindsym j exec --no-startup-id apod-bg -jump 1
+        bindsym k exec --no-startup-id apod-bg -jump -1
+        bindsym i exec --no-startup-id apod-bg -info
+        bindsym m exec --no-startup-id apod-bg -mode
+        bindsym t exec --no-startup-id apod-bg -apod
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
 
 bindsym $mod+p mode "wallpaper"
+exec xrdb ~/.Xresources
+exec apod-bg --login
+exec xterm -e tmux
+exec --no-startup-id i3-msg 'workspace 2; exec icecat; workspace 1'
