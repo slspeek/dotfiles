@@ -167,3 +167,4 @@ exec xrdb ~/.Xresources
 exec apod-bg --login
 exec xterm -e tmux
 exec --no-startup-id i3-msg 'workspace 2; exec icecat; workspace 1'
+exec --no-startup-id i3-msg 'workspace 9; exec ktorrent; workspace 1'
