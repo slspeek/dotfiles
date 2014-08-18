@@ -137,8 +137,9 @@ bindsym $mod+r mode "resize"
 #Custom programs I want to run often
 bindsym $mod+i exec --no-startup-id inkscape
 bindsym $mod+c exec --no-startup-id chromium
+bindsym $mod+comma exec --no-startup-id evolution
 bindsym $mod+Shift+Return exec --no-startup-id icecat
-bindsym $mod+m exec --no-startup-id pcmanfm
+bindsym $mod+m exec --no-startup-id pcmanfm 
 
 bindcode 122 exec --no-startup-id amixer set Master 5%- unmute
 bindcode 123 exec --no-startup-id amixer set Master 5%+ unmute
@@ -167,4 +168,5 @@ exec xrdb ~/.Xresources
 exec apod-bg --login
 exec xterm -e tmux
 exec --no-startup-id i3-msg 'workspace 2; exec icecat; workspace 1'
+exec --no-startup-id i3-msg 'workspace 2;workspace 3; exec evolution; workspace 1'
 exec --no-startup-id i3-msg 'workspace 9; exec ktorrent; workspace 1'
