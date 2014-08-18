@@ -140,6 +140,7 @@ bindsym $mod+g exec --no-startup-id google-chrome
 bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+Shift+Return exec --no-startup-id chromium
 bindsym $mod+m exec --no-startup-id pcmanfm
+bindsym $mod+comma exec --no-startup-id evolution
 
 bindcode 122 exec --no-startup-id amixer set Master 5%- unmute
 bindcode 123 exec --no-startup-id amixer set Master 5%+ unmute
@@ -163,3 +164,9 @@ mode "wallpaper" {
 }
 
 bindsym $mod+p mode "wallpaper"
+exec xrdb ~/.Xresources
+exec apod-bg --login
+exec xterm -e tmux
+exec --no-startup-id i3-msg 'workspace 2; exec chromium; workspace 1'
+exec --no-startup-id i3-msg 'workspace 2;workspace 3; exec evolution; workspace 1'
+exec --no-startup-id i3-msg 'workspace 9; exec ktorrent; workspace 1'
