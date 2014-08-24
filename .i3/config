@@ -138,6 +138,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+i exec --no-startup-id inkscape
 bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+comma exec --no-startup-id evolution
+bindsym $mod+dot exec --no-startup-id xterm -e vim ~/.i3/config
 bindsym $mod+Shift+Return exec --no-startup-id icecat
 bindsym $mod+m exec --no-startup-id pcmanfm 
 
@@ -165,6 +166,7 @@ mode "wallpaper" {
 
 bindsym $mod+p mode "wallpaper"
 exec xrdb ~/.Xresources
+exec gnome-keyring
 exec apod-bg --login
 exec xterm -e tmux
 exec --no-startup-id i3-msg 'workspace 2; exec icecat; workspace 1'
