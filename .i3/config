@@ -138,7 +138,7 @@ bindsym $mod+r mode "resize"
 bindsym $mod+i exec --no-startup-id iceweasel
 bindsym $mod+c exec --no-startup-id chromium
 bindsym $mod+comma exec --no-startup-id evolution
-bindsym $mod+dot exec --no-startup-id xterm -e vim ~/.i3/config
+bindsym $mod+period exec --no-startup-id xterm -e vim ~/.i3/config
 bindsym $mod+Shift+Return exec --no-startup-id dwb
 bindsym $mod+m exec --no-startup-id pcmanfm 
 
