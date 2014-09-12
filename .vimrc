@@ -139,6 +139,7 @@ set backup
 set autowrite
 set laststatus=2
 let g:ctrlp_max_height = 30
+let g:ctrlp_ignore = 'report'
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/eggs/*
@@ -190,5 +191,6 @@ let g:syntastic_javascript_closure_compiler_path ="$HOME/closure/mfc/node_module
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 nnoremap ; :
-set tags=$HOME/projs/camli/src/camlistore.org/tags
+set tags=$HOME/go/src/tags
 "imap <C-i> <C-o>:Import 
+
