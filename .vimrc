@@ -34,7 +34,6 @@ Bundle 'lukerandall/haskellmode-vim'
 Bundle 'vcscommand.vim'
 Bundle 'sjl/threesome.vim'
 Bundle 'gregsexton/gitv'
-Bundle 'tpope/vim-fugitive'
 "needs +python build option
 " Support for D
 "Bundle 'JesseKPhillips/d.vim'
@@ -192,5 +191,4 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 nnoremap ; :
 set tags=$HOME/go/src/tags
-"imap <C-i> <C-o>:Import 
 

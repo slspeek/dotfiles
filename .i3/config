@@ -137,10 +137,16 @@ bindsym $mod+r mode "resize"
 #Custom programs I want to run often
 bindsym $mod+i exec --no-startup-id iceweasel
 bindsym $mod+c exec --no-startup-id chromium
+<<<<<<< HEAD
 bindsym $mod+comma exec --no-startup-id evolution
 bindsym $mod+period exec --no-startup-id xterm -e vim ~/.i3/config
 bindsym $mod+Shift+Return exec --no-startup-id dwb
 bindsym $mod+m exec --no-startup-id pcmanfm 
+=======
+bindsym $mod+Shift+Return exec --no-startup-id chromium
+bindsym $mod+m exec --no-startup-id pcmanfm
+bindsym $mod+comma exec --no-startup-id evolution
+>>>>>>> 968592f1c5a1425ea1aad23204859da438b214e6
 
 bindcode 122 exec --no-startup-id amixer set Master 5%- unmute
 bindcode 123 exec --no-startup-id amixer set Master 5%+ unmute
@@ -157,8 +163,8 @@ mode "wallpaper" {
         bindsym j exec --no-startup-id apod-bg -jump 1
         bindsym k exec --no-startup-id apod-bg -jump -1
         bindsym i exec --no-startup-id apod-bg -info
-        bindsym m exec --no-startup-id apod-bg -mode
         bindsym t exec --no-startup-id apod-bg -apod
+        bindsym m exec --no-startup-id apod-bg -mode
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
