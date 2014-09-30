@@ -53,7 +53,7 @@ Bundle 'vim-auto-save'
 "
 "Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
-set omnifunc=syntaxcomplete#Complete
+
 
 " Color schemes
 Bundle 'molokai'
@@ -67,6 +67,7 @@ filetype plugin indent on     " required!
 filetype plugin on
 filetype indent on
 
+set omnifunc=syntaxcomplete#Complete
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 "autocmd! bufwritepost *.js :JSHint
@@ -190,5 +191,5 @@ let g:syntastic_javascript_closure_compiler_path ="$HOME/closure/mfc/node_module
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 nnoremap ; :
-set tags=$HOME/projs/camli/src/camlistore.org/tags
-"imap <C-i> <C-o>:Import 
+set tags=$HOME/go/src/tags
+"imap <C-0> <C-o>:Import 
