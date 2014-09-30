@@ -22,9 +22,9 @@ floating_modifier $mod
 bindsym $mod+Return exec xterm
 
 bindsym $mod+Control+Q exec sudo /sbin/poweroff
-bindsym $mod+Shift+K exec xkill
+bindsym $mod+Shift+X exec xkill
 
-# kill focused window
+# kill focused windw
 bindsym $mod+Shift+Q kill
 
 # start dmenu (a program launcher)
