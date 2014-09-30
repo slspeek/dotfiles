@@ -21,6 +21,9 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xterm
 
+bindsym $mod+Control+Q exec sudo /sbin/poweroff
+bindsym $mod+Shift+K exec xkill
+
 # kill focused window
 bindsym $mod+Shift+Q kill
 
