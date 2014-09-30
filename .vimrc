@@ -17,7 +17,6 @@ Bundle 'lukaszb/vim-web-indent'
 Bundle 'godlygeek/tabular'
 Bundle 'walm/jshint.vim'
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'tpope/vim-fugitive'
 Bundle 'aurigadl/vim-angularjs'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'jsruntime.vim'
@@ -139,6 +138,7 @@ set backup
 set autowrite
 set laststatus=2
 let g:ctrlp_max_height = 30
+let g:ctrlp_ignore = 'report'
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/eggs/*
@@ -189,5 +189,6 @@ let g:syntastic_javascript_closure_compiler_path ="$HOME/closure/mfc/node_module
 
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
-set tags=$HOME/projs/camli/src/camlistore.org/tags
-"imap <C-i> <C-o>:Import 
+nnoremap ; :
+set tags=$HOME/go/src/tags
+

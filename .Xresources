@@ -4,6 +4,6 @@ XTerm*foreground:       white
 XTerm*cursorColor:      white
 XTerm.vt100.geometry:   79x25
 XTerm*scrollTtyOutput:  false
-XTerm.defaultFont:      large
+XTerm.defaultFont:      medium
 XTerm*faceName: Bitstream Vera Serif Mono
-XTerm*faceSize: 12
+XTerm*faceSize: 15
