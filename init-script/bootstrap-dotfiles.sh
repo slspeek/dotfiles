@@ -20,7 +20,7 @@ cd ~/.config/
 ln -s ../$DOTFILES/fish
 
 
-cd $DOTFILES
+cd ~/$DOTFILES
 git submodule init
 git submodule update
 

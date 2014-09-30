@@ -21,9 +21,6 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec xterm
 
-bindsym $mod+Control+Q exec sudo /sbin/poweroff
-bindsym $mod+Shift+X exec xkill
-
 # kill focused windw
 bindsym $mod+Shift+Q kill
 
@@ -181,3 +178,7 @@ exec --no-startup-id i3-msg 'workspace 9; exec ktorrent; workspace 1'
 assign [class="xine"] 1
 assign [class="mplayer"] 1
 assign [class="vlc"] 1
+
+bindsym $mod+Control+Q exec --no-startup-id sudo /sbin/poweroff
+bindsym $mod+Shift+X exec --no-startup-id xkill
+
