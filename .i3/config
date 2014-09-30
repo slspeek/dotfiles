@@ -136,11 +136,11 @@ bindsym $mod+r mode "resize"
 
 #Custom programs I want to run often
 bindsym $mod+i exec --no-startup-id iceweasel
-bindsym $mod+g exec --no-startup-id google-chrome
 bindsym $mod+c exec --no-startup-id chromium
-bindsym $mod+Shift+Return exec --no-startup-id chromium
-bindsym $mod+m exec --no-startup-id pcmanfm
 bindsym $mod+comma exec --no-startup-id evolution
+bindsym $mod+period exec --no-startup-id xterm -e vim ~/.i3/config
+bindsym $mod+Shift+Return exec --no-startup-id dwb
+bindsym $mod+m exec --no-startup-id pcmanfm 
 
 bindcode 122 exec --no-startup-id amixer set Master 5%- unmute
 bindcode 123 exec --no-startup-id amixer set Master 5%+ unmute
@@ -157,8 +157,8 @@ mode "wallpaper" {
         bindsym j exec --no-startup-id apod-bg -jump 1
         bindsym k exec --no-startup-id apod-bg -jump -1
         bindsym i exec --no-startup-id apod-bg -info
-        bindsym t exec --no-startup-id apod-bg -apod
         bindsym m exec --no-startup-id apod-bg -mode
+        bindsym t exec --no-startup-id apod-bg -apod
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
@@ -166,8 +166,12 @@ mode "wallpaper" {
 
 bindsym $mod+p mode "wallpaper"
 exec xrdb ~/.Xresources
-exec apod-bg --login
+exec gnome-keyring
+exec apod-bg -login
 exec xterm -e tmux
-exec --no-startup-id i3-msg 'workspace 2; exec chromium; workspace 1'
+exec --no-startup-id i3-msg 'workspace 2; exec dwb; workspace 1'
 exec --no-startup-id i3-msg 'workspace 2;workspace 3; exec evolution; workspace 1'
 exec --no-startup-id i3-msg 'workspace 9; exec ktorrent; workspace 1'
+
+
+assign [class="xine"] 1
