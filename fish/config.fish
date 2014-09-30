@@ -8,3 +8,6 @@ alias sud='sudo su -'
 stty -ixon
 setxkbmap -layout us -option ctrl:nocaps
 #stty stop undef
+alias S='pacman -S --needed'
+alias Ss='pacman -Ss'
+

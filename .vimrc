@@ -139,6 +139,7 @@ set backup
 set autowrite
 set laststatus=2
 let g:ctrlp_max_height = 30
+let g:ctrlp_ignore = 'report'
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/eggs/*

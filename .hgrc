@@ -1,0 +1,5 @@
+[ui]
+username = Steven Speek <slspeek@gmail.com>
+[extensions]
+hgk=
+hgext.imerge = !
