@@ -192,3 +192,6 @@ let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=1
 set tags=$HOME/go/src/tags
 "imap <C-0> <C-o>:Import 
+
+map <leader>' <C-w>jzz
+

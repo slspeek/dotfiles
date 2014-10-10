@@ -158,6 +158,7 @@ mode "wallpaper" {
         bindsym j exec --no-startup-id apod-bg -jump 1
         bindsym k exec --no-startup-id apod-bg -jump -1
         bindsym i exec --no-startup-id apod-bg -info
+        bindsym r exec --no-startup-id apod-bg -random
         bindsym m exec --no-startup-id apod-bg -mode
         bindsym t exec --no-startup-id apod-bg -apod
         # back to normal: Enter or Escape
