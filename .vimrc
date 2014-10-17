@@ -195,3 +195,5 @@ set tags=$HOME/go/src/tags
 
 map <leader>' <C-w>jzz
 
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
