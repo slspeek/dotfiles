@@ -46,7 +46,7 @@ Bundle 'javacomplete'
 Bundle 'buffet.vim'
 Bundle 'ScrollColors'
 Bundle 'AutoComplPop'
-Bundle 'vim-auto-save'
+"Bundle 'vim-auto-save'
 
 "Golang
 "
