@@ -5,5 +5,5 @@ XTerm*cursorColor:      white
 XTerm.vt100.geometry:   79x25
 XTerm*scrollTtyOutput:  false
 XTerm.defaultFont:      medium
-XTerm*faceName: Bitstream Vera Serif Mono
+XTerm*faceName: Terminus
 XTerm*faceSize: 15

@@ -188,4 +188,5 @@ assign [class="vlc"] 1
 
 bindsym $mod+Control+Q exec --no-startup-id sudo /sbin/poweroff
 bindsym $mod+slash exec xterm -e xkill
+bindsym $mod+y exec xterm -e youtube-dl $(xclip -o -selection clipboard)
 
