@@ -1,3 +1,4 @@
+set -x LANG nl_NL.UTF-8
 set -x GOPATH ~/go
 set -x EDITOR vim
 set -x PATH $GOROOT/bin $GOPATH/bin ~/tools/bin $PATH /usr/local/bin

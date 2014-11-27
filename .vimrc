@@ -39,8 +39,8 @@ Bundle 'gregsexton/gitv'
 "Bundle 'JesseKPhillips/d.vim'
 
 "Python support
-"Bundle 'davidhalter/jedi-vim'
-"Bundle 'kevinw/pyflakes-vim'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'kevinw/pyflakes-vim'
 Bundle 'javacomplete'
 
 Bundle 'buffet.vim'
@@ -69,7 +69,7 @@ filetype indent on
 set omnifunc=syntaxcomplete#Complete
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
-"autocmd! bufwritepost *.js :JSHint
+autocmd! bufenter *.py :set expandtab
 
 map <F1> <ESC>
 map <F5> :tabprevious<CR>
