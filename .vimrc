@@ -10,6 +10,8 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 " Javascript related
 Bundle 'scrooloose/syntastic'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Shougo/vimshell.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-surround'
@@ -31,6 +33,10 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 " Haskell
 Bundle 'lukerandall/haskellmode-vim'
+" Idris
+Bundle 'idris-hackers/idris-vim'
+
+
 Bundle 'vcscommand.vim'
 Bundle 'sjl/threesome.vim'
 Bundle 'gregsexton/gitv'
