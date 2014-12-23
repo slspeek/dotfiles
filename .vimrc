@@ -59,6 +59,10 @@ Bundle 'AutoComplPop'
 "Bundle 'jnwhiteh/vim-golang'
 Bundle 'Blackrush/vim-gocode'
 
+" Latex
+Bundle 'latex-support.vim'
+
+let g:Latex_MapLeader=','
 
 " Color schemes
 Bundle 'molokai'
