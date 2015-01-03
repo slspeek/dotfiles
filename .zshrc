@@ -23,3 +23,10 @@ alias help=run-help
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+
+#disable <C-s> in the shell
+stty -ixon
+setxkbmap -layout us -option ctrl:nocaps
+
+alias S='sudo pacman -S --needed'
+alias Ss='pacman -Ss --needed'

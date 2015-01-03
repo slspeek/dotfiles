@@ -8,6 +8,8 @@ call vundle#rc()
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
+
+Bundle 'CoqIDE'
 " Javascript related
 Bundle 'scrooloose/syntastic'
 Bundle 'Shougo/vimproc.vim'
@@ -80,6 +82,8 @@ set omnifunc=syntaxcomplete#Complete
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 autocmd! bufenter *.py :set expandtab
+autocmd! bufenter *.v :CoqIDESetMap
+
 
 map <F1> <ESC>
 map <F5> :tabprevious<CR>
@@ -93,7 +97,7 @@ imap <c-s> :w
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
-set pastetoggle=<F2>
+set pastetoggle=<F12>
 set clipboard=unnamed
 
 
@@ -173,7 +177,7 @@ autocmd Filetype python set ts=4
 autocmd Filetype python set softtabstop=4 
 autocmd Filetype python set shiftwidth=4
 
-map <silent> <F3> :Bufferlist<CR>
+"map <silent> <F3> :Bufferlist<CR>
 map <C-_> :Bufferlist<CR>
 
 autocmd Filetype go map <F4> :Fmt<CR>
