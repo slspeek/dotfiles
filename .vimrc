@@ -9,7 +9,9 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-Bundle 'CoqIDE'
+"Bundle 'CoqIDE'
+Bundle 'def-lkb/vimbufsync'
+Bundle 'the-lambda-church/coquille'
 " Javascript related
 Bundle 'scrooloose/syntastic'
 Bundle 'Shougo/vimproc.vim'
@@ -82,7 +84,9 @@ set omnifunc=syntaxcomplete#Complete
 " Automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 autocmd! bufenter *.py :set expandtab
-autocmd! bufenter *.v :CoqIDESetMap
+"autocmd! bufenter *.v :CoqIDESetMap
+" Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
+au FileType coq call coquille#FNMapping()
 
 
 map <F1> <ESC>
