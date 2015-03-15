@@ -53,8 +53,8 @@ if [ -f /etc/bash_completion ]; then
 fi
 PS1_BASE='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]'
 #export GOROOT=$HOME/tools/go
-export GOPATH=$HOME/projs/nog
-export PATH=$HOME/.cabal/bin:$HOME/bin:$HOME/haskell_tools/bin:$HOME/tools/bin:$GOROOT/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$HOME/.cabal/bin:$HOME/bin:$HOME/haskell_tools/bin:$HOME/tools/bin:$GOPATH/bin:$PATH
 HISTSIZE=100000
 setxkbmap -layout us -option ctrl:nocaps
 #stty stop undef

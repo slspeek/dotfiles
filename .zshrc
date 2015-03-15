@@ -28,5 +28,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 stty -ixon
 setxkbmap -layout us -option ctrl:nocaps
 
+export PATH=~/tools/bin:$PATH
+export GOPATH=~/go
 alias S='sudo pacman -S --needed'
 alias Ss='pacman -Ss --needed'
