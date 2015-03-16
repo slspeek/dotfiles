@@ -66,6 +66,9 @@ Bundle 'Blackrush/vim-gocode'
 " Latex
 Bundle 'latex-support.vim'
 
+" Gradle
+Bundle 'tfnico/vim-gradle'
+
 let g:Latex_MapLeader=','
 
 " Color schemes
