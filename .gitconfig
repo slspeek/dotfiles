@@ -1,3 +1,5 @@
 [user]
 	name = Steven L. Speek
 	email = slspeek@gmail.com
+[push]
+	default = matching

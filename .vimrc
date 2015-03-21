@@ -160,7 +160,12 @@ set backup
 set autowrite
 set laststatus=2
 let g:ctrlp_max_height = 30
-let g:ctrlp_ignore = 'report'
+let g:ctrlp_ignore = 'report .class build'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(build|bin|git|hg|svn)$',
+  \ 'file': '\v\.(class|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 set wildignore+=*.pyc
 set wildignore+=*_build/*
 set wildignore+=*/eggs/*

@@ -60,3 +60,4 @@ setxkbmap -layout us -option ctrl:nocaps
 #stty stop undef
 alias S='sudo pacman -S --needed'
 alias Ss='pacman -Ss --needed'
+source ~/fspotcloud.install/env.sh
