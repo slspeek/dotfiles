@@ -177,14 +177,12 @@ exec xrdb ~/.Xresources
 exec gnome-keyring
 exec xterm -e tmux
 exec (cd ~/go/src && ctags -R .)
-exec --no-startup-id i3-msg 'workspace 2; exec dwb; workspace 1'
-#exec --no-startup-id i3-msg 'workspace 2;workspace 3; exec evolution; workspace 1'
-exec --no-startup-id i3-msg 'workspace 9; exec ktorrent; workspace 1'
 
 
 assign [class="xine"] 1
 assign [class="mplayer"] 1
 assign [class="vlc"] 1
+assign [class="Xpdf"] 9
 
 bindsym $mod+Control+Q exec --no-startup-id sudo /sbin/poweroff
 bindsym $mod+slash exec xterm -e xkill

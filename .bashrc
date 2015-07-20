@@ -48,9 +48,9 @@ alias l='ls -CF'
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-fi
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+	    . /usr/share/bash-completion/bash_completion
+
 PS1_BASE='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]'
 #export GOROOT=$HOME/tools/go
 export GOPATH=$HOME/go

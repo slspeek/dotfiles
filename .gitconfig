@@ -3,3 +3,5 @@
 	email = slspeek@gmail.com
 [push]
 	default = matching
+[core]
+	excludesfile = ~/.gitignore
