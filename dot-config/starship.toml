@@ -1,0 +1,29 @@
+format="""\
+$username\
+$os\
+$directory\
+$git_commit\
+$git_branch\
+$git_status\
+$git_state\
+$status\
+"""
+
+[os]
+disabled = false
+
+[status]
+format = '[$symbol$maybe_int]($style) '
+disabled = false
+success_symbol = '[❯](bold green)'
+map_symbol = true
+pipestatus = true
+
+[git_commit]
+disabled = false
+tag_disabled = false
+only_detached = false
+
+[username]
+show_always = true
+format = "[$user]($style) "
