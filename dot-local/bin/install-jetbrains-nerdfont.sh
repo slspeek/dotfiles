@@ -12,7 +12,7 @@ INSTALL_DIR="/usr/local/share/fonts/NerdFonts"
 echo "➡️ Start installatie van $FONT_NAME Nerd Font ($FONT_VERSION)..."
 
 # 1. Benodigde pakketten installeren
-sudo apt-get update
+sudo apt-get update || true
 sudo apt-get install -y wget unzip fontconfig
 
 # 2. Map maken indien nodig
