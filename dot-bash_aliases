@@ -1,0 +1,6 @@
+alias fd=fdfind
+alias v=nvim
+alias ls='lsd'
+alias ll='lsd -l'
+alias la='lsd -a'
+alias bat='batcat'

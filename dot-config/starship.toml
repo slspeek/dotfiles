@@ -22,8 +22,8 @@ pipestatus = true
 [git_commit]
 disabled = false
 tag_disabled = false
-only_detached = false
+#only_detached = false
 
 [username]
-show_always = true
+#show_always = true
 format = "[$user]($style) "

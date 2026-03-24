@@ -2,11 +2,13 @@
 
 sudo apt-get update
 sudo apt-get install --yes \
-	neovim \
-	stow \
-	lazygit \
-	zoxide \
+	bat \
 	fd-find \
+	fzf \
+	lazygit \
+	lsd \
+	neovim \
 	starship \
+	stow \
+	zoxide \
 	zsh \
-	fzf
