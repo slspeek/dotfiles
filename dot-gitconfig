@@ -1,0 +1,5 @@
+[user]
+	name = Steven L. Speek
+	email = slspeek@gmail.com
+[push]
+	followTags = true
