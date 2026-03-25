@@ -1,7 +1,7 @@
 # Dotfiles
 
 ```
-sudo apt install git
+sudo apt install --yes git
 mkdir -p ~/.local/bin ~/dotfiles.backup
 mv ~/.bashrc ~/.profile ~/dotfiles.backup
 git clone https://github.com/slspeek/dotfiles.git ~/.dotfiles
