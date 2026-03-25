@@ -8,8 +8,10 @@ sudo apt-get install --yes \
 	lazygit \
 	lsd \
 	neovim \
+	ripgrep \
 	starship \
 	stow \
+	trash-cli \
 	zoxide \
 	zsh \
 

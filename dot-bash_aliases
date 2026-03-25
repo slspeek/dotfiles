@@ -1,6 +1,7 @@
-alias fd=fdfind
-alias v=nvim
-alias ls='lsd'
-alias ll='lsd -l'
-alias la='lsd -a'
 alias bat='batcat'
+alias fd=fdfind
+alias la='lsd -a'
+alias ll='lsd -l'
+alias ls='lsd'
+alias rm=trash-put
+alias v=nvim
