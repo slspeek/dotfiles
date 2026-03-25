@@ -11,6 +11,7 @@ sudo apt-get install --yes \
 	ripgrep \
 	starship \
 	stow \
+	tealdeer \
 	trash-cli \
 	zoxide \
 	zsh \
