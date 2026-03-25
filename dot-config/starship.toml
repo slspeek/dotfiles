@@ -6,6 +6,7 @@ $git_commit\
 $git_branch\
 $git_status\
 $git_state\
+$python\
 $status\
 """
 
@@ -23,6 +24,10 @@ pipestatus = true
 disabled = false
 tag_disabled = false
 #only_detached = false
+
+[python]
+# Only use the `python3` binary to get the version.
+python_binary = 'python3'
 
 [username]
 #show_always = true

@@ -12,3 +12,5 @@ sudo apt-get install --yes \
 	stow \
 	zoxide \
 	zsh \
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
