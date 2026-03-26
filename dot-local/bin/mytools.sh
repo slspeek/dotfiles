@@ -12,6 +12,7 @@ sudo apt-get install --yes \
 	starship \
 	stow \
 	tealdeer \
+	tmux \
 	trash-cli \
 	zoxide \
 	zsh \
