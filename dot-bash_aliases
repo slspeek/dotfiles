@@ -4,4 +4,5 @@ alias la='lsd -a'
 alias ll='lsd -l'
 alias ls='lsd'
 alias rm=trash-put
+alias t=tmux
 alias v=nvim
