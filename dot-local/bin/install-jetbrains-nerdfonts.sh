@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 set -e
+
+if fc-list | grep 'NerdFont' &> /dev/null; then
+	echo "NerdFont is al geinstalleerd, script wordt op verzoek afgebroken"
+	exit 0
+fi
 # Script om JetBrains Nerd Font system-wide te installeren op Debian
 # Bron: https://github.com/ryanoasis/nerd-fonts
 
