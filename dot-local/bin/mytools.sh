@@ -3,6 +3,7 @@
 sudo apt-get update
 sudo apt-get install --yes \
 	bat \
+	curl \
 	fd-find \
 	fzf \
 	lazygit \
