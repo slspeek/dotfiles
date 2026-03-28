@@ -25,9 +25,9 @@ TEMP_DIR=$(mktemp -d)
 SUB_PATH=files/etc/dconf/db/local.d
 
 git_sparse_clone https://github.com/slspeek/fai \
-	"$TEMP_DIR" "$SUB_PATH"
+  "$TEMP_DIR" "$SUB_PATH"
 
-for CONFFILE in $(find "$TEMP_DIR/$SUB_PATH" -type f|
-	grep -v 40-gnome-extensions); do
-	dconf load / < "$CONFFILE"
+for CONFFILE in $(find "$TEMP_DIR/$SUB_PATH" -type f |
+  grep -v 40-gnome-extensions); do
+  dconf load / < "$CONFFILE"
 done
