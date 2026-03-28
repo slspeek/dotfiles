@@ -29,7 +29,8 @@ fi
 # 3. Downloaden en uitpakken
 echo "➡️ Downloaden van $FONT_NAME..."
 cd /tmp
-wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download/${FONT_VERSION}/${FONT_NAME}.zip"
+wget -q "https://github.com/ryanoasis/nerd-fonts/releases/download\
+/${FONT_VERSION}/${FONT_NAME}.zip"
 
 echo "➡️ Uitpakken..."
 unzip -o "${FONT_NAME}.zip" -d "${FONT_NAME}_unpacked"
