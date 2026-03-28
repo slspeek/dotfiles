@@ -1,24 +1,31 @@
-all: bashsyntax shellcheck shfmt
+shfiles := shell("fdfind --glob \"*.sh\"|tr '\n' ' '")
+dotfiles := ".bashrc .profile .bash_aliases"
+scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases "
+
+all: bashsyntax dotshellcheck shellcheck shfmt
 
 fix: shellcheckfix shfmtfix
 
 bashsyntax:
-	for SCRIPT in $(fdfind --glob "*.sh"); do \
+	for SCRIPT in {{scripts}}; do \
 		bash -n $SCRIPT;\
 	done
 
+dotshellcheck:
+	cd $HOME && shellcheck --shell=bash {{dotfiles}} 
+
 shellcheck:
-	for SCRIPT in $(fdfind --glob "*.sh"); do \
-		shellcheck $SCRIPT;\
+	for SCRIPT in {{shfiles}}; do \
+		shellcheck --shell=bash $SCRIPT;\
 	done
 
 shellcheckfix:
-	for SCRIPT in $(fdfind --glob "*.sh"); do \
+	for SCRIPT in {{scripts}}; do \
 		shellcheck  --format diff $SCRIPT|git apply --allow-empty;\
 	done
 
 shfmt:
-	for SCRIPT in $(fdfind --glob "*.sh"); do \
+	for SCRIPT in {{scripts}}; do \
 		shfmt --space-redirects \
 		--case-indent \
 		--indent 2 \
@@ -27,10 +34,15 @@ shfmt:
 	done
 
 shfmtfix:
-	for SCRIPT in $(fdfind --glob "*.sh"); do \
+	for SCRIPT in {{scripts}}; do \
 		shfmt --space-redirects \
 		--case-indent \
 		--indent 2 \
 		--write $SCRIPT;\
 	done
 
+maxlinelength:
+	for SCRIPT in {{scripts}}; do \
+	 	echo $SCRIPT;\
+	done
+	#awk 'BEGIN{} length($0) > 80 {long_lines[++i]=NR; print NR, "is te lang"}END{if (length(long_lines)> 0) exit 2}' 
