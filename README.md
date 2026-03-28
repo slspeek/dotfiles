@@ -2,6 +2,11 @@
 
 ## Installation
 
+For the next commands to work your user needs sudo rights:
+```
+su -c sh -c "echo $USER ALL=\(ALL:ALL\) ALL > /etc/sudoers.d/$USER &&
+  chmod 0440 /etc/sudoers.d/$USER"
+```
 Please backup your own configuration files first. These commands **will** overwrite them.
 
 ```
