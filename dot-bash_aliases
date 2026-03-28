@@ -1,4 +1,5 @@
 alias bat='batcat'
+alias clip='xclip -selection clipboard -i'
 alias fd=fdfind
 alias la='lsd -a'
 alias ll='lsd -l'
