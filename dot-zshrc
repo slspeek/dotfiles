@@ -1,0 +1,13 @@
+autoload -U compinit && compinit
+
+if [[ -f ~/.bash_aliases ]]; then
+	source ~/.bash_aliases
+fi
+
+
+
+eval "$(fzf --zsh)"
+# Starship prompt
+_ZO_DOCTOR=0
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(starship init zsh)"
