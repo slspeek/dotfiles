@@ -26,9 +26,9 @@ if ! command -v uv; then
 fi
 
 if ! command -v cargo; then
-  "$(basename "$(realpath "$0")")"/install-cargo.sh
+  "$(dirname "$(realpath "$0")")"/install-cargo.sh
 fi
 
 if ! command -v zellij; then
-  "$(basename "$(realpath "$0")")"/install-zellij.sh
+  "$(dirname "$(realpath "$0")")"/install-zellij.sh
 fi
