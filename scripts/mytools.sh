@@ -27,6 +27,8 @@ fi
 
 if ! command -v cargo; then
   "$(dirname "$(realpath "$0")")"/install-cargo.sh
+  # shellcheck disable=SC1091
+  source "$HOME/.cargo/env"
 fi
 
 if ! command -v zellij; then
