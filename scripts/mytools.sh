@@ -21,4 +21,14 @@ sudo apt-get install --yes \
   zoxide \
   zsh
 
-curl -LsSf https://astral.sh/uv/install.sh | sh
+if ! command -v uv; then
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+fi
+
+if ! command -v cargo; then
+  "$(basename "$(realpath 0)")"/install-cargo.sh
+fi
+
+if ! command -v zellij; then
+  "$(basename "$(realpath 0)")"/install-zellij.sh
+fi
