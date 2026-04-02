@@ -11,6 +11,7 @@ sudo apt-get install --yes \
   lsd \
   neovim \
   ripgrep \
+  shellcheck \
   shfmt \
   starship \
   stow \
