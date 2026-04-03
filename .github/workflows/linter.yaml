@@ -13,7 +13,7 @@ jobs:
       - name: Install just
         run: sudo snap install just --classic
       - name: Install the dotfiles
-        run: stow -v --dotfiles --adopt .
+        run: stow -v --dotfiles --adopt --target /home/worker .
       - name: Restore repo
         run: git restore .
       - name: pwd
