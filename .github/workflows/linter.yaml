@@ -16,5 +16,7 @@ jobs:
         run: stow -v --dotfiles --adopt .
       - name: Restore repo
         run: git restore .
+      - name: pwd
+        run: pwd
       - name: Run justfile
         run: just
