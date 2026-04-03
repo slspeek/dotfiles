@@ -9,8 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install tools
-        run: sudo apt-get --yes install shellcheck shfmt fd-find
+        run: sudo apt-get --yes install stow shellcheck shfmt fd-find
       - name: Install just
         run: sudo snap install just --classic
+      - name: Install the dotfiles
+        run: stow -v --dotfiles --adopt
+      - name: Restore repo
+        run: git restore .
       - name: Run justfile
         run: just
