@@ -12,9 +12,11 @@ jobs:
         run: sudo apt-get --yes install stow shellcheck shfmt fd-find
       - name: Install just
         run: sudo snap install just --classic
+      - name: Make .config and .local/bin dir in $HOME
+        run: mkdir -p /home/runner/.config /home/runner/.local/bin
       - name: Install the dotfiles
         run: stow -v --dotfiles --adopt --target /home/runner .
-      - name: Restore repo
+      - name: Restore repo=
         run: git restore .
       - name: pwd
         run: pwd
