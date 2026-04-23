@@ -1,6 +1,6 @@
 shfiles := shell("fdfind --glob \"*.sh\"|tr '\n' ' '")
-dotfiles := ".bashrc .profile .bash_aliases"
-scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases "
+dotfiles := ".bashrc .profile .bash_aliases .bash_logout"
+scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases dot-bash_logout"
 
 all: bashsyntax dotshellcheck shellcheck shfmt maxlinelength
 
@@ -43,5 +43,11 @@ shfmtfix:
 
 maxlinelength:
 	for SCRIPT in {{scripts}}; do \
-		awk 'BEGIN{} length($0) > 80 {long_lines[++i]=NR; print FILENAME,NR, "is te lang"}END{if (length(long_lines)> 0) exit 2}' $SCRIPT; \
+		awk 'length($0) > 80 { \
+		  long_lines[++i]=NR; \
+		  print FILENAME,NR, "is te lang" \
+		} \
+		END { \
+		  if (length(long_lines)> 0) exit 2 \
+		}' $SCRIPT; \
 	done
