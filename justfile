@@ -4,9 +4,9 @@ maxcol := "80"
 ts := "4"
 scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases dot-bash_logout"
 
-all: shebangline bashsyntax dotshellcheck shellcheck shfmt maxlinelength
+all: shfmt shebangline bashsyntax dotshellcheck shellcheck maxlinelength
 
-fix: shellcheckfix shfmtfix
+fix: shfmtfix shellcheckfix 
 
 shebangline:
     #!/usr/bin/env bash
