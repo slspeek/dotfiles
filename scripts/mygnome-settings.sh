@@ -27,7 +27,10 @@ SUB_PATH=files/etc/dconf/db/local.d
 git_sparse_clone https://github.com/slspeek/fai \
   "$TEMP_DIR" "$SUB_PATH"
 
+dconf dump / > ~/dconf.dump.backup.$RANDOM
+
 for CONFFILE in $(find "$TEMP_DIR/$SUB_PATH" -type f |
   grep -v 40-gnome-extensions); do
+  sed -i -e 's/{%browser%}/firefox.desktop/g' $CONFFILE
   dconf load / < "$CONFFILE"
 done
