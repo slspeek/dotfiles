@@ -119,3 +119,4 @@ eval "$(fzf --bash)"
 _ZO_DOCTOR=0
 eval "$(zoxide init --cmd cd bash)"
 eval "$(starship init bash)"
+eval "$(zellij setup --generate-auto-start bash)"
