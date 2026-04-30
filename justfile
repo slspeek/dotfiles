@@ -1,6 +1,7 @@
 shfiles := shell("fdfind --glob \"*.sh\"|tr '\n' ' '")
 dotfiles := ".bashrc .profile .bash_aliases .bash_logout"
 maxcol := "80"
+ts := "4"
 scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases dot-bash_logout"
 
 all: shebangline bashsyntax dotshellcheck shellcheck shfmt maxlinelength
@@ -55,7 +56,7 @@ shfmt:
     for SCRIPT in {{ scripts }}; do 
     	shfmt --space-redirects \
     	--case-indent \
-    	--indent 2 \
+    	--indent {{ts}} \
     	--diff \
     	$SCRIPT
     done
@@ -64,9 +65,9 @@ shfmtfix:
     #!/usr/bin/env bash
     echo "Shfmt fix"
     for SCRIPT in {{ scripts }}; do 
-    	shfmt --space-redirects 
-    	--case-indent 
-    	--indent 2 
+    	shfmt --space-redirects \
+    	--case-indent \
+    	--indent {{ts}} \
     	--write $SCRIPT
     done
 
