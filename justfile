@@ -6,7 +6,7 @@ scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases dot-bash_logout"
 
 all: shfmt shebangline bashsyntax dotshellcheck shellcheck maxlinelength
 
-fix: shfmtfix shellcheckfix 
+fix: shfmtfix shellcheckfix
 
 shebangline:
     #!/usr/bin/env bash
@@ -56,7 +56,7 @@ shfmt:
     for SCRIPT in {{ scripts }}; do 
     	shfmt --space-redirects \
     	--case-indent \
-    	--indent {{ts}} \
+    	--indent {{ ts }} \
     	--diff \
     	$SCRIPT
     done
@@ -67,7 +67,7 @@ shfmtfix:
     for SCRIPT in {{ scripts }}; do 
     	shfmt --space-redirects \
     	--case-indent \
-    	--indent {{ts}} \
+    	--indent {{ ts }} \
     	--write $SCRIPT
     done
 
