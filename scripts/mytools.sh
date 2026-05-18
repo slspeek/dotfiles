@@ -18,6 +18,7 @@ sudo apt-get install --yes \
     tealdeer \
     tmux \
     trash-cli \
+    wl-clipboard \
     zoxide \
     zsh
 
