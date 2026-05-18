@@ -113,6 +113,10 @@ if ! shopt -oq posix; then
         . /etc/bash_completion
     fi
 fi
+if [ -f "$HOME/.config/zellij/completion.bash" ]; then
+    # shellcheck disable=SC1091
+    . "$HOME/.config/zellij/completion.bash"
+fi
 
 eval "$(fzf --bash)"
 # Starship prompt
