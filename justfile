@@ -76,7 +76,7 @@ maxlinelength:
     echo "Checking maxline length of {{ maxcol }}" 
     set -e
     for SCRIPT in {{ scripts }}; do 
-    	awk -vmaxcol={{ maxcol }} -e 'length($0) > maxcol {
+    	awk -vmaxcol={{ maxcol }} 'length($0) > maxcol {
     	  long_lines[++i]=NR
     	  print FILENAME,NR, "is te lang"
     	} 
