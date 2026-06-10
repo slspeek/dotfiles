@@ -123,4 +123,9 @@ eval "$(fzf --bash)"
 _ZO_DOCTOR=0
 eval "$(zoxide init --cmd cd bash)"
 eval "$(starship init bash)"
-eval "$(zellij setup --generate-auto-start bash)"
+# Automatically start or attach to tmux in interactive shells
+if command -v tmux &> /dev/null &&
+    [ -n "$PS1" ] && [ -z "$TMUX" ] &&
+    [ "$TERM_PROGRAM" != "vscode" ]; then
+    tmux attach-session -t default || tmux new-session -s default
+fi
