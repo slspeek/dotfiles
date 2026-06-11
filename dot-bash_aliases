@@ -1,4 +1,5 @@
 alias aps='apt-cache search'
+alias vbr='vim ~/.bashrc'
 alias afs='apt-file search'
 alias bat='batcat'
 alias clip='xclip -selection clipboard -i'

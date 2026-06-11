@@ -122,10 +122,19 @@ eval "$(fzf --bash)"
 # Starship prompt
 _ZO_DOCTOR=0
 eval "$(zoxide init --cmd cd bash)"
+if [[ $(tty) =~ /dev/tty || -n $VIRUAL_TERMINAL ]]; then
+    export VIRUAL_TERMINAL=1
+    (cd ~/.config &&
+        ln -s -f "$(realpath starship-plain-text.toml)" starship.toml)
+else
+    (cd ~/.config &&
+        ln -s -f "$(realpath starship-x-terminal.toml)" starship.toml)
+fi
 eval "$(starship init bash)"
 # Automatically start or attach to tmux in interactive shells
 if command -v tmux &> /dev/null &&
     [ -n "$PS1" ] && [ -z "$TMUX" ] &&
     [ "$TERM_PROGRAM" != "vscode" ]; then
-    tmux attach-session -t default || tmux new-session -s default
+    tmux attach-session -t default ||
+        tmux -L VIRUAL_TERMINAL new-session -s default
 fi
