@@ -1,5 +1,6 @@
 pre-commit
 .github
+dot-gitconfig
 justfile
 scripts
 RCS
