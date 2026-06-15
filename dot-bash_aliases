@@ -1,12 +1,14 @@
-alias aps='apt-cache search'
+alias acs='apt-cache search'
 alias vbr='vim ~/.bashrc'
 alias afs='apt-file search'
 alias bat='batcat'
 alias clip='xclip -selection clipboard -i'
 alias fd=fdfind
-alias la='lsd -a'
-alias ll='lsd -l'
-alias ls='lsd'
+if [ -z "$VIRTUAL_TERMINAL" ]; then
+    alias la='lsd -a'
+    alias ll='lsd -l'
+    alias ls='lsd'
+fi
 alias pol='apt policy'
 alias rm=trash-put
 alias show='apt show'
