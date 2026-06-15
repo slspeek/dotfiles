@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO_PATH=$(realpath "$0")/..
+REPO_PATH=$(dirname "$(realpath "$0")")/..
 
 function change_remote_origin() {
     cd "$REPO_PATH" || exit
