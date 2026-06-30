@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-REPO_PATH=$(dirname "$(realpath "$0")")/..
+repo_path=$(realpath "$(dirname "$0")/..")
 
 function change_remote_origin() {
-    cd "$REPO_PATH" || exit
+    cd "$repo_path" || exit
     git remote set-url origin git@github.com:slspeek/dotfiles
 }
 
 function link_gitconfig() {
-    ln -s ~/"$REPO_PATH"/dot-gitconfig ~/.gitconfig
+    ln -s "$repo_path"/dot-gitconfig ~/.gitconfig
 }
 
 change_remote_origin
