@@ -13,5 +13,7 @@ alias pol='apt policy'
 alias rm=trash-put
 alias show='apt show'
 alias t=tmux
+alias udb='echo user-db:user>/tmp/profile && 
+    DCONF_PROFILE=/tmp/profile dconf dump /|less'
 alias v=nvim
 alias why='aptitude why'
