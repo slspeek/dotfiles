@@ -98,6 +98,13 @@ if ! shopt -oq posix; then
         . /etc/bash_completion
     fi
 fi
+
+# Define the path to your mailbox file
+export MAIL=/var/mail/$USER
+
+# Check for mail immediately upon shell start (0 seconds interval)
+export MAILCHECK=0
+
 if [ -f "$HOME/.config/zellij/completion.bash" ]; then
     # shellcheck disable=SC1091
     . "$HOME/.config/zellij/completion.bash"
