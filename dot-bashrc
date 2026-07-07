@@ -134,6 +134,11 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+if [ -f ~/.bash_functions ]; then
+    # shellcheck disable=SC1090
+    . ~/.bash_functions
+fi
+
 # Automatically start or attach to tmux in interactive shells
 if command -v tmux &> /dev/null &&
     [ -n "$PS1" ] && [ -z "$TMUX" ] &&
