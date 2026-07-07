@@ -1,8 +1,8 @@
 shfiles := shell("fdfind --glob \"*.sh\"|tr '\n' ' '")
-dotfiles := ".bashrc .profile .bash_aliases .bash_logout"
+dotfiles := ".bashrc .profile .bash_aliases .bash_functions .bash_logout"
 maxcol := "80"
 ts := "4"
-scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases dot-bash_logout"
+scripts := shfiles + " dot-bashrc dot-profile dot-bash_aliases dot-bash_functions dot-bash_logout"
 
 all: shfmt shebangline bashsyntax dotshellcheck shellcheck maxlinelength
 
