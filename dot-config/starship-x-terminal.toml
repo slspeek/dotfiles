@@ -12,6 +12,8 @@ $status\
 
 [os]
 disabled = false
+[os.symbols]
+Debian = "\uf306 "
 
 [status]
 format = '[$symbol$maybe_int]($style) '
