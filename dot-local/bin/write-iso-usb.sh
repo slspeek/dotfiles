@@ -61,7 +61,7 @@ function confirm() {
             [Yy] | [Yy][Ee][Ss])
                 return 0 # Success / True
                 ;;
-            [Nn] | [Nn][Oo])
+            "" | [Nn] | [Nn][Oo])
                 return 1 # Failure / False
                 ;;
             *)
