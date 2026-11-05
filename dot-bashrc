@@ -138,6 +138,6 @@ fi
 if command -v tmux &> /dev/null &&
     [ -n "$PS1" ] && [ -z "$TMUX" ] &&
     [ "$TERM_PROGRAM" != "vscode" ]; then
-    tmux attach-session -t default ||
-        tmux new-session -e VIRUAL_TERMINAL="$VIRUAL_TERMINAL" -s default
+    exec bash -c "tmux attach-session -t default ||
+        tmux new-session -e VIRUAL_TERMINAL=\"$VIRUAL_TERMINAL\" -s default"
 fi
