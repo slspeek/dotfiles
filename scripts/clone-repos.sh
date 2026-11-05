@@ -3,7 +3,7 @@
 set -e
 
 github_user=slspeek
-declare -a repos=(fai fai-cmds kookboek debian)
+declare -a repos=(fai fai-cmds kookboek debian latex-bussiness-card)
 
 function clone_repo() {
     local repo=$1
